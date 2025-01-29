@@ -1,0 +1,24 @@
+# Your code here
+def count_even_numbers(N, queries):
+    results = []
+    for a, b in queries:
+        # Find the smallest even number in the range [a, b]
+        start_even = a if a % 2 == 0 else a + 1
+        # Find the largest even number in the range [a, b]
+        end_even = b if b % 2 == 0 else b - 1
+        # If start_even > end_even, there are no even numbers in the range
+        if start_even > end_even:
+            results.append(0)
+        else:
+            # Calculate the number of even numbers
+            results.append((end_even - start_even) // 2 + 1)
+    return results
+
+# Input
+N, Q = map(int, input().split())
+queries = [tuple(map(int, input().split())) for _ in range(Q)]
+
+# Output
+results = count_even_numbers(N, queries)
+for res in results:
+    print(res)
