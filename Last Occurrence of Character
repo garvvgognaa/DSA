@@ -1,0 +1,7 @@
+S = input().strip()
+C = input().strip()
+last_index = -1
+for i in range(len(S)):
+    if S[i] == C:
+        last_index = i
+print(last_index)
