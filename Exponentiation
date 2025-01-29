@@ -1,0 +1,8 @@
+a, b = map(int, input().split())
+def modular_exponentiation(a, b):
+    MOD = 10**9 + 7
+    result = 1
+    for i in range(b):
+        result = result*a
+    print(result%MOD)
+print(modular_exponentiation(a, b))
