@@ -1,0 +1,18 @@
+def searchMatrix(mat, target):
+    if not mat or not mat[0]:
+        return False 
+    n = len(mat)
+    m = len(mat[0])
+    left = 0
+    right = n*m-1
+    while left<=right:
+        mid = (left+right)//2
+        row,col = divmod(mid,m)
+        if mat[row][col] == target:
+            return True
+        elif mat[row][col] < target:
+            left = mid + 1
+        else:
+            right = mid - 1
+    
+    return False
