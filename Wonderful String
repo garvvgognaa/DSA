@@ -1,0 +1,14 @@
+s = input()
+c1 = 0
+c2 = 0
+s1 = set()
+for i in s:
+    if i.isupper():
+        c1+=1
+    if i.islower():
+        c2+=1
+    s1.add(i)
+if c1>0 and c2>0 and len(s)==len(s1):
+        print("Yes")
+else:
+    print("No")
