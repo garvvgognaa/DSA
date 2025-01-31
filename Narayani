@@ -1,0 +1,16 @@
+def find_lucky_number():
+
+    n = int(input())
+    arr = list(map(int, input().split()))
+    frequency = {}
+    for num in arr:
+        frequency[num] = frequency.get(num, 0) + 1 
+    max_freq = max(frequency.values())
+    lucky_number = float('inf')
+    
+    for num, freq in frequency.items():
+        if freq == max_freq:
+            lucky_number = min(lucky_number, num)
+
+    print(lucky_number)
+find_lucky_number()
