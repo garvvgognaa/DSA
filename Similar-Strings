@@ -1,0 +1,19 @@
+n=int(input())
+s=input()
+t=input()
+z=""
+for i in range(n):
+    if s[i]=="*" and t[i]=="n":
+        z+=s[i]
+    elif s[i]=="n" and t[i]=="*":
+        z+=s[i]
+    elif s[i]=="#" and t[i]=="m":
+        z+=s[i]
+    elif s[i]=="m" and t[i]=="#":
+        z+=s[i]
+    elif s[i]==t[i]:
+        z+=s[i]
+if z==s:
+    print("Yes")
+else:
+    print("No")
