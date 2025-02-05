@@ -1,0 +1,11 @@
+def maxArray(nums, n=None):
+    if n is None:
+        n = len(nums)
+    if n == 1:
+        return nums[0]  
+    max_in_rest = maxArray(nums, n - 1)
+
+    if nums[n - 1] > max_in_rest:
+        return nums[n - 1]
+    else:
+        return max_in_rest
