@@ -1,0 +1,6 @@
+def sumArray(nums,n = None):
+    if n is None:
+        n = len(nums)
+    if n == 1:
+        return nums[0]
+    return nums[n - 1] + sumArray(nums, n - 1)
