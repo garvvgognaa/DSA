@@ -1,0 +1,11 @@
+# Your code here
+def tribonacci(n):
+    if n == 1:
+        return 0 
+    elif n == 2:
+        return 0 
+    elif n == 3:
+        return 1
+    return tribonacci(n-1) + tribonacci(n-2) + tribonacci(n-3)
+n = int(input())
+print(tribonacci(n))
