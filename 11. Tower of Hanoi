@@ -2,7 +2,7 @@ def TowerOfHanoi(N, source, destination, auxiliary):
     if N == 1:
         print(f"1:{source}->{destination}")
         return
-    TowerOfHanoi(N - 1, source, auxiliary, destination)  # Move N-1 disks to auxiliary rod
+    TowerOfHanoi(N - 1, source, auxiliary, destination)  
     print(f"{N}:{source}->{destination}")  
     TowerOfHanoi(N - 1, auxiliary, destination, source)  
 
