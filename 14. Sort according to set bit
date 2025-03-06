@@ -1,0 +1,5 @@
+def get_number_of_set_bits(number):
+    return bin(number).count('1')
+
+def sorted_by_set_bits(input_list):
+    return sorted(input_list, key=lambda x: (get_number_of_set_bits(x), x))
